@@ -1,0 +1,26 @@
+/* Filter Functions receives a function as parameter and returns the same or less elements 
+ * than original array, depending if the elements fulfill the condition or not.
+ */
+const numbers = [1, 2, 3, 4, 5, 6]
+
+const greaterThanZero = el => el > 0
+const greaterThanTen = el => el > 10
+const even = el => el % 2 === 0
+
+console.log(numbers.filter(el => el > 0))
+console.log(numbers.filter(greaterThanZero))
+console.log(numbers.filter(greaterThanTen))
+console.log(numbers.filter(even))
+
+const students = [
+    { name: 'Jake', score: 6.4 },
+    { name: 'Susan', score: 8.6 },
+    { name: 'Emma', score: 9.4 },
+    { name: 'Peter', score: 9.1 }
+]
+
+const greatStudent = student => student.score >= 9
+const studentName = student => student.name
+
+console.log(students.filter(greatStudent))
+console.log(students.filter(greatStudent).map(studentName))
